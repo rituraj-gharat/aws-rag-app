@@ -274,7 +274,7 @@ if uploaded_file is not None:
 
     st.success(f"Selected file: {uploaded_file.name}")
 
-    if st.button("Upload & Sync 🚀"):
+    if st.button("Upload & Sync"):
         try:
             st.session_state.ready = False
             st.session_state.sync_status = None
@@ -314,7 +314,7 @@ if uploaded_file is not None:
 
                 if status == "COMPLETE":
                     st.session_state.ready = True
-                    progress.progress(100, text="Sync complete ✅")
+                    progress.progress(100, text="Sync complete.")
                     st.success("Sync complete. You can ask questions now.")
                     break
 
@@ -343,13 +343,13 @@ if st.session_state.sync_status:
 st.header("2) Quick Prompts")
 c1, c2, c3, c4 = st.columns(4)
 
-if c1.button("📄 Summarize"):
+if c1.button("Summarize"):
     st.session_state.last_query = "summarize"
-if c2.button("🧠 Key Points"):
+if c2.button("Key Points"):
     st.session_state.last_query = "key points"
-if c3.button("📌 Overview"):
+if c3.button("Overview"):
     st.session_state.last_query = "about"
-if c4.button("⚠️ Risks"):
+if c4.button("Risks"):
     st.session_state.last_query = "risks"
 
 # =========================================================
