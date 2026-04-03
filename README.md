@@ -1,22 +1,28 @@
+# AWS RAG Document Chat
 
----
+A multi-user document Q&A system built using:
 
-# 🚀 Step 7: Deploy (optional but recommended)
+- AWS Bedrock Knowledge Base
+- Streamlit UI
+- S3 for document storage
 
-Once pushed, you can deploy to:
+## Features
 
-### 👉 Streamlit Cloud (BEST for recruiter demo)
-- Go to: https://streamlit.io/cloud
-- Connect GitHub repo
-- Add secrets in UI
-- Deploy
+- Upload your own document
+- Auto-sync to Knowledge Base
+- Ask questions (RAG)
+- Multi-user isolation using session-based prefixing
+- Secure AWS integration
 
----
+## Tech Stack
 
-# 🔥 Pro tip (makes your project stand out)
+- Python
+- Streamlit
+- AWS Bedrock
+- S3
 
-Add this to README:
+## How to Run
 
-```md
-## Live Demo
-[Coming Soon 🚀]
+```bash
+pip install -r requirements.txt
+streamlit run app.py
